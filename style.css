@@ -9,6 +9,7 @@
   --color-black: #000000;
   --color-dark-gray: #4d4d4d;
   --color-gray: #616161;
+  --color-light-gray: #7c7979;
   --color-blue: #73aace;
   --color-yelow: #fff7d1;
   --color-orange: #feb546;
@@ -27,6 +28,9 @@
 
   /* Size */
   --size-border-radious: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
 }
 
 /* Universal tags */
@@ -143,4 +147,67 @@ p {
   padding: 8px 12px;
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radious);
+}
+
+/* Section common */
+.section {
+  padding: 50px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* About */
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+}
+.major__icon {
+  width: 170px;
+  height: 170px;
+  font-size: 70px;
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  line-height: 170px;
+  margin-bottom: 16px;
+  color: var(--color-blue);
+}
+.major__icon i {
+  transition: all var(--animation-duration) ease;
+}
+.major__icon:hover i {
+  color: var(--color-pink);
+  transform: rotate(-30deg) scale(1.1);
+}
+
+.major__title,
+.major__description {
+  color: var(--color-dark-gray);
+}
+.major__description {
+  font-size: var(--font-small);
+}
+.school {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.school__description {
+  margin: 0 16px;
+  text-align: left;
+}
+
+.school__logo {
+  height: 60px;
+}
+.school__name,
+.school__period {
+  color: var(--color-light-gray);
+}
+.school__name {
+  font-size: var(--font-small);
+}
+.school__period {
+  font-size: var(--font-micro);
 }
