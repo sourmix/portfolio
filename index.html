@@ -20,12 +20,12 @@
             <a href="#">Yoonji</a>
         </div>
         <ul class="navbar__menu">
-            <li class="navbar__menu__item active">Home</li>
-            <li class="navbar__menu__item">About</li>
-            <li class="navbar__menu__item">Skills</li>
-            <li class="navbar__menu__item">My work</li>
-            <li class="navbar__menu__item">Testimonial</li>
-            <li class="navbar__menu__item">Contact</li>
+            <li class="navbar__menu__item active" data-link="#home">Home</li>
+            <li class="navbar__menu__item" data-link="#about">About</li>
+            <li class="navbar__menu__item" data-link="#skills">Skills</li>
+            <li class="navbar__menu__item" data-link="#work">My work</li>
+            <li class="navbar__menu__item" data-link="#testimonials">Testimonial</li>
+            <li class="navbar__menu__item" data-link="#contact">Contact</li>
         </ul>
 
         <!-- Toggle button -->
@@ -36,9 +36,11 @@
 
     <!-- Home -->
     <main id="home">
+        <div class="home__container">
             <img src="imgs/profile.jpg" class="home__avatar" alt="">
             <h1 class="home__title">Hello, <br>I'm Dream Coder</h1>
             <h2 class="home__description">A web developer in Seoul, Korea</h2>
+        </div>
         <button class="home__contact">CONTACT ME</button>
     </main>
 
@@ -169,35 +171,42 @@
             <h1 class="title">My work</h1>
             <h3 class="subtitle">Projects</h3>
             <div class="work__categories">
-                <button class="category__btn active">
+                <button class="category__btn selected" data-filter="*">
                     All<span class="category__count">3</span></button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="front-end">
                     Front-end<span class="category__count">2</span></button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="back-end">
                     Back-end<span class="category__count">2</span></button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="mobile">
                     Mobile<span class="category__count">1</span></button>
             </div>
             <div class="work__projects">
-                <a href="#" target="_blank" class="project">
+                <a href="https://watcha.com/ko-KR/contents/mqW9vMO" target="_blank" data-type="front-end" class="project">
                     <img src="imgs/projects/1.jpeg" alt="River Phoenix" class="project__img">
                     <div class="project__description">
                         <h3>River Phoenix</h3>
                         <span>American actor</span>
                     </div>
                 </a>
-                <a href="#" target="_blank" class="project">
+                <a href="https://youtu.be/PGNiXGX2nLU" target="_blank" data-type="back-end" class="project">
                     <img src="imgs/projects/2.jpg" alt="Pete Burns" class="project__img">
                     <div class="project__description">
                         <h3>Pete Burns</h3>
                         <span>English musician</span>
                     </div>
                 </a>
-                <a href="#" target="_blank" class="project">
+                <a href="https://watcha.com/contents/mVWzQV5" target="_blank" data-type="front-end" class="project">
                     <img src="imgs/projects/3.jpeg" alt="River Phoenix" class="project__img">
                     <div class="project__description">
                         <h3>River Phoenix</h3>
                         <span>American actor</span>
+                    </div>
+                </a>
+                <a href="https://watcha.com/contents/mjO0mLd" target="_blank" data-type="mobile" class="project">
+                    <img src="imgs/projects/4.jpg" alt="Leslie Cheung" class="project__img">
+                    <div class="project__description">
+                        <h3>Leslie Cheung</h3>
+                        <span>Hong Kong singer and actor</span>
                     </div>
                 </a>
             </div>
@@ -242,5 +251,9 @@
         </div>
         <p class="contact__rights">2022 Yoonji Shin - All rights reserved</p>
     </footer>
+    <!-- Arrow up -->
+    <button class="arrow__up">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 </html>
